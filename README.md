@@ -39,7 +39,7 @@ ingress controller and the admin api). Something as simple as:
 
 ```yaml
       - name: acme-kong-kube-helper
-        image: eu.gcr.io/adarga-workbench-dev/acme-kong-kube-helper:0.0.1
+        image: ollystephens/acme-kong-kube-helper:0.0.1
         imagePullPolicy: IfNotPresent
 ```
 
