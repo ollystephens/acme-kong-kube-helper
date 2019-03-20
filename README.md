@@ -1,6 +1,7 @@
 # acme-kong-kube-helper
 A kong-ingress-controller helper utility needed short-term
-# acme-kong-kube-helper v0.0.1
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/ollystephens/acme-kong-kube-helper.svg)](https://hub.docker.com/r/ollystephens/acme-kong-kube-helper/)
 
 This is a simple helper designed to solve a particular integration problem
 facing the co-operative working of the `kong-ingress-controller` and `cert-manager`.
@@ -66,10 +67,10 @@ something like:
 
 ```log
 2019/03/15 13:48:41 Matching ingress added: cm-acme-http-solver-fpkj9
-2019/03/15 13:48:41   path /.well-known/acme-challenge/lRbquExN4nRtF-EmX2OzEVAyslZs7_wkW8rJAvNpt2I
-2019/03/15 13:48:51 found matching kong route: /.well-known/acme-challenge/lRbquExN4nRtF-EmX2OzEVAyslZs7_wkW8rJAvNpt2I = 4bfdb085-402e-4604-a088-2ce8b7fa911a
-2019/03/15 13:48:51 successfully patched kong route: 4bfdb085-402e-4604-a088-2ce8b7fa911a
-2019/03/15 13:49:01 found matching kong route: /.well-known/acme-challenge/lRbquExN4nRtF-EmX2OzEVAyslZs7_wkW8rJAvNpt2I = 4bfdb085-402e-4604-a088-2ce8b7fa911a
-2019/03/15 13:49:01 nothing to do; route for /.well-known/acme-challenge/lRbquExN4nRtF-EmX2OzEVAyslZs7_wkW8rJAvNpt2I already has preserve_host set
-2019/03/15 13:49:31 mission accomplished for path /.well-known/acme-challenge/lRbquExN4nRtF-EmX2OzEVAyslZs7_wkW8rJAvNpt2I
+2019/03/15 13:48:41   path /.well-known/acme-challenge/a1b2c3
+2019/03/15 13:48:51 found matching kong route: /.well-known/acme-challenge/a1b2c3 = d4e5-f6e7
+2019/03/15 13:48:51 successfully patched kong route: d4e5-f6e7
+2019/03/15 13:49:01 found matching kong route: /.well-known/acme-challenge/a1b2c3 = d4e5-f6e7
+2019/03/15 13:49:01 nothing to do; route for /.well-known/acme-challenge/a1b2c3 already has preserve_host set
+2019/03/15 13:49:31 mission accomplished for path /.well-known/acme-challenge/a1b2c3
 ```
