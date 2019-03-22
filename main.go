@@ -130,8 +130,10 @@ func patchKong(path string) {
 					}
 				}
 			}
+		} else if err != nil {
+			log.Printf("failed to query kong for routes: %s\n", err.Error())
 		} else {
-			log.Printf("failed to query kong for routes: [%d] %s\n", resp.StatusCode, err.Error())
+			log.Printf("failed to query kong for routes: [%d] %s\n", resp.StatusCode, resp.Status)
 		}
 		if found {
 			foundOnce = true

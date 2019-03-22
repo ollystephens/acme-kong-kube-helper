@@ -45,7 +45,13 @@ ingress controller and the admin api). Something as simple as:
 ```
 
 This should work if you've used the default yaml file for the ingress crontroller. If not,
-you might need to tweak the arguments to let it know the admin api url
+you might need to tweak the arguments to let it know the admin api url.
+
+The helper needs to run with equivalent permissions to the ingress controller;
+it needs to be able to listen for ingress creation events across the whole cluter. The
+easiest way to give it the correct permissions is to include it in the same pod, as suggested
+above. If you don't want to do that, the second easiest thing to do is make sure it uses
+the same `serviceaccount` as the ingress controller.
 
 ## Arguments
 
