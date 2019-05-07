@@ -3,6 +3,16 @@ A kong-ingress-controller helper utility needed short-term
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/ollystephens/acme-kong-kube-helper.svg)](https://hub.docker.com/r/ollystephens/acme-kong-kube-helper/)
 
+## Update
+
+*Note:* `kong-ingress-controller` v0.4 was released on April 24th; although I've not yet
+had a chance to try it myself, it should render this helper obsolete as it sets
+"preserve_host" to true by default now.
+
+https://github.com/Kong/kubernetes-ingress-controller/blob/master/CHANGELOG.md#040---20190424
+
+## Introduction
+
 This is a simple helper designed to solve a particular integration problem
 facing the co-operative working of the `kong-ingress-controller` and `cert-manager`.
 
@@ -40,7 +50,7 @@ ingress controller and the admin api). Something as simple as:
 
 ```yaml
       - name: acme-kong-kube-helper
-        image: ollystephens/acme-kong-kube-helper:0.0.1
+        image: ollystephens/acme-kong-kube-helper:0.0.2
         imagePullPolicy: IfNotPresent
 ```
 
