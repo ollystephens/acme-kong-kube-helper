@@ -1,5 +1,5 @@
 # acme-kong-kube-helper
-A kong-ingress-controller helper utility needed short-term
+A kong-ingress-controller helper utility ~~needed short-term~~ no longer needed
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/ollystephens/acme-kong-kube-helper.svg)](https://hub.docker.com/r/ollystephens/acme-kong-kube-helper/)
 
