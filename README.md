@@ -35,6 +35,23 @@ for new ingresses.
 It's only had limited testing, but has thus far been successful in allowing http01 challenges
 to complete automatically.
 
+## DB-less Kong
+
+Kong 1.1 now allows you to run without a database. Unfortunately, when running in this mode,
+patching routes is not allowed so this helper will fail to achieve it's goal. It will get
+a 405 error (method not allowed) response from the kong admin UI.
+
+Fortunately, C45tr0 has patched a version of the controller that uses a default ingress
+and associates any acme requests with that. It's a different way of solving the problem
+and one that has the distinct advantage that it works with DB-less Kong. So I'd suggest
+using that version instead. Again, the need should go away with v0.5
+
+A thread discussing the patch here:
+https://github.com/ollystephens/acme-kong-kube-helper/issues/5#issuecomment-494946699
+
+The patched version of the helper here:
+https://hub.docker.com/r/c45tr0/acme-kong-kube-helper
+
 ## Deploying it
 
 Deploy it inside the `kong-ingress-controller` pod, as a third container (it already has the
